@@ -1,41 +1,101 @@
-# Prerequisites
-*.d
+# ------------------------------------------------------------
+# OS & editor junk
+# ------------------------------------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
+*.log
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# VS Code (通常建议忽略整个 .vscode)
+.vscode/
+# ——如果你想把团队协作需要的 VS Code 配置纳入版本控制，
+#    可以取消下面两行的注释，仅跟踪少数文件：
+# !.vscode/settings.json
+# !.vscode/extensions.json
 
-# Precompiled Headers
-*.gch
-*.pch
+# JetBrains / other IDEs
+.idea/
+*.code-workspace
 
-# Linker files
-*.ilk
+# ------------------------------------------------------------
+# Python / MicroPython
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.mypy_cache/
+.pytest_cache/
+.pyright/
+.venv/
+venv/
+env/
+.pyenv/
+# MicroPython 已编译字节码（通常不入库）
+*.mpy
 
-# Debugger Files
-*.pdb
+# ------------------------------------------------------------
+# Node (如有前端小工具)
+# ------------------------------------------------------------
+node_modules/
+dist/
+.cache/
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# ------------------------------------------------------------
+# ESP-IDF（CMake）构建产物
+# ------------------------------------------------------------
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake-build-*/
+Makefile
+*.cmake
+compile_commands.json
 
-# Fortran module files
-*.mod
-*.smod
+# IDF 工具与依赖下载/锁文件
+.espressif/
+managed_components/
+dependencies.lock
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# IDF 项目配置（二选一：一般不入库；若需固定环境可改为跟踪）
+sdkconfig
+sdkconfig.old
+sdkconfig.ci
 
-# Executables
-*.exe
-*.out
-*.app
+# IDF 其他生成文件
+flash_args
+project_description.json
 
-# debug information files
-*.dwo
+# 固件/映像/调试产物
+*.bin
+*.elf
+*.map
+*.srec
+*.hex
+*.dump
+*.trace
+
+# ------------------------------------------------------------
+# PlatformIO
+# ------------------------------------------------------------
+.pio/
+.ccls-cache/
+
+# ------------------------------------------------------------
+# Arduino (VS Code Arduino 扩展 & 构建缓存)
+# ------------------------------------------------------------
+*.arduino*
+# 如果使用 Arduino CLI 的临时输出目录也可加上
+# .arduino-build/
+
+# ------------------------------------------------------------
+# Misc tools
+# ------------------------------------------------------------
+# clangd 缓存（配置文件 .clangd 一般建议保留）
+.cache/clangd/
+gdb_history
+.claude
