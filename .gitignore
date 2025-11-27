@@ -98,4 +98,4 @@ project_description.json
 # clangd 缓存（配置文件 .clangd 一般建议保留）
 .cache/clangd/
 gdb_history
-.claude
+.claude/
